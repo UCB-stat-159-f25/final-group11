@@ -5,4 +5,4 @@ Lavin: Data Cleaning/EDA
 
 Aiden: Modeling with a neural network
 
-Kireeti: Conclusion, Project Description in README, Myst, GitHub Pages, makefile, binder
+Kireeti: Conclusion, Project Description in README, Myst, GitHub Pages, makefile, binder, .gitignore
