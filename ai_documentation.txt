@@ -1,1 +1,2 @@
 Henry: No generative AI prompts were used in the completion of this project
+Lavin: used llm to divide work into balanced sections for teamwork, used llm for occasional plotly font help
