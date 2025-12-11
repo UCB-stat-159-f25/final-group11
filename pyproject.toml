@@ -10,7 +10,7 @@ authors = [
 description = "This module provides tools for measuring model fitting performance for loan approval rates."
 readme = "README.md"
 
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
     "numpy==2.3",
     "pandas==2.3",
@@ -32,7 +32,7 @@ Homepage = "https://github.com/UCB-stat-159-f25/final-group11"
 Issues = "https://github.com/UCB-stat-159-f25/final-group11/issues"
 
 [tool.setuptools]
-packages = ["fittools"]
+packages = ["loan_tools"]
 
 [tool.setuptools.dynamic]
-version = {attr = "ligotools.__version__"}
+version = {attr = "loan_tools.__version__"}
