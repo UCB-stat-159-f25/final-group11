@@ -1,47 +1,41 @@
-# test_logit_utils.py
-import pytest
 import pandas as pd
 import numpy as np
 import statsmodels.api as sm
 import warnings
-from loan_tools.fittools import get_classification_rate, best_alpha
 
-sample_data = pd.DataFrame({
-    'loan_status': [0, 1, 0, 1, 0, 1],
-    'credit_score': [700, 680, 720, 650, 710, 690],
-    'loan_amount': [5000, 10000, 7000, 8000, 6000, 9000],
-    'loan_intent_Personal': [1, 0, 1, 0, 1, 0],
-    'loan_intent_Education': [0, 1, 0, 1, 0, 1]
-})
+def get_classification_rate(md, X, df, y = 'loan_status'):
+    df = df.copy()
 
-X_cols = ['credit_score', 'loan_amount', 'loan_intent_Personal', 'loan_intent_Education']
-X_train = sm.add_constant(sample_data[X_cols].astype(float))
-y_train = sample_data['loan_status']
+    df[X] = df[X].astype(float)
+    X_pred = sm.add_constant(df[X])
 
-
-def test_get_classification_rate():
-    model = sm.Logit(y_train, X_train).fit(disp=0)
-    rate, cutoff = get_classification_rate(model, X_cols, df=sample_data, y='loan_status')
+    df['loan_prob'] = md.predict(X_pred)
     
-    assert isinstance(rate, float)
-    assert isinstance(cutoff, float)
-    assert 0 <= rate <= 100
-    assert 0 <= cutoff <= 1
+    cutoffs = np.linspace(0, 1, 101)
+    scores = {
+        cutoff: (df['loan_prob'] >= cutoff).eq(df['loan_status']).mean()
+        for cutoff in cutoffs
+        }
 
+    best_cutoff = max(scores, key=scores.get)
+    best_classification_rate = scores[best_cutoff]
+    return best_classification_rate * 100, round(best_cutoff, 2)
 
-def test_best_alpha():
-    alphas = [0.1, 1, 10]
-    best_model, best_classification, best_alpha_val = best_alpha(
-        alphas=alphas,
-        train=sample_data,
-        test=sample_data,
-        lp='l1',
-        y_var='loan_status'
-    )
-    
-    assert best_model is not None
-    assert isinstance(best_classification, (tuple, list))
-    assert isinstance(best_alpha_val, (float, np.floating))
-    
-    assert 0 <= best_classification[0] <= 100
-    assert 0 <= best_classification[1] <= 1
+def best_alpha(alphas, train, test , lp = 'l1', y_var = 'loan_status'):
+	y = train[y_var]
+	X_cols_reg = list(train.columns)
+	X_cols_reg.remove(y_var)
+	X_reg = sm.add_constant(train[X_cols_reg].astype(float))    
+	best_model = None
+	best_classification = [0,0]
+	best_alpha = 0
+	for alpha in alphas:
+		with warnings.catch_warnings():
+			warnings.simplefilter("ignore")
+			model = sm.Logit(y, X_reg).fit_regularized(method=lp, alpha=alpha)
+		classification_rate = get_classification_rate(model, X_cols_reg, df = test, y = y_var)
+		if classification_rate[0] > best_classification[0]:
+			best_model = model
+			best_classification = classification_rate
+			best_alpha = alpha
+	return best_model, best_classification, best_alpha
