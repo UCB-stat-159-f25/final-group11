@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loan_tools"
+authors = [
+  { name="Henry Liev", email="lievhenry@berkeley.edu" },
+]
+description = "This module provides tools for measuring model fitting performance for loan approval rates."
+readme = "README.md"
+
+requires-python = ">=3.13"
+dependencies = [
+    "numpy==2.3",
+    "pandas==2.3",
+	"statsmodels==0.14"
+]
+
+license = "BSD-3-Clause"
+license-files = ["LICEN[CS]E*"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+
+keywords = ["tools", "loans"]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/UCB-stat-159-f25/final-group11"
+Issues = "https://github.com/UCB-stat-159-f25/final-group11/issues"
+
+[tool.setuptools]
+packages = ["fittools"]
+
+[tool.setuptools.dynamic]
+version = {attr = "ligotools.__version__"}
