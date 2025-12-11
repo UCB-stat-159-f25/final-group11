@@ -1,0 +1,12 @@
+name: loanstatus
+channels:
+  - conda-forge
+  - nodefaults
+  - defaults
+dependencies:
+  - python = 3.13
+  - pandas = 2.3
+  - numpy = 2.3
+  - seaborn = 0.13
+  - matplotlib = 3.10
+  - plotly = 6.5
