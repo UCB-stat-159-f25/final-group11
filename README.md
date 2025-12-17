@@ -10,11 +10,14 @@ Bank lenders face high volumes of loan approval requests every day and need a st
 
 Through our exploratory data analysis, we noticed some correlations between age, credit score, and debt with the likelihood of getting a loan approved. 
 
-## Analysis
+## Analysis + Conclusion
 
-In our experimentation with machine learning models, we used a 99/1 train-test split since we had 1,000,000 datapoints. The models we used had similar testing performance (~87%).
+In our experimentation with machine learning models, we used a 99/1 train-test split since we had a large dataset (1,000,000 datapoints). The models we used had similar testing performance (~87%). Through our experimentation, we validated our original hypothesis that loan approvals/rejections followed some pattern, which we were able to accurately and consistently demonstrate with the machine learning models in our notebooks.
 
-To reproduce our results, please open the Binder below and run the cells in the notebooks for Parts 1-3 (in order).
+To reproduce our results, please open the binder below and run the cells in the notebooks for Parts 1-3 (in order).
 
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://hub.2i2c.mybinder.org/user/ucb-stat-159-f25-final-group11-er9bc57r/doc/tree/Part1.ipynb)
+
+
+Here is a link to our GitHub pages: https://stat159.datahub.berkeley.edu/user/kchilaka/myst-build/projects/final-group11/
