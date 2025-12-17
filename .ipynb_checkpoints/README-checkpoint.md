@@ -14,6 +14,8 @@ Through our exploratory data analysis, we noticed some correlations between age,
 
 In our experimentation with machine learning models, we used a 99/1 train-test split since we had a large dataset (1,000,000 datapoints). The models we used had similar testing performance (~87%). Through our experimentation, we validated our original hypothesis that loan approvals/rejections followed some pattern, which we were able to accurately and consistently demonstrate with the machine learning models in our notebooks.
 
+## Steps to Reproduce Our Findings
+
 To reproduce our results locally, please follow the steps below:
 1. In the terminal, run make. This will configure the conda environment. Note that this will take some time to complete running. 
 2. Run each of the Jupyter Notebooks in sequential order
