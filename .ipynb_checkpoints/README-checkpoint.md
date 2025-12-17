@@ -14,10 +14,13 @@ Through our exploratory data analysis, we noticed some correlations between age,
 
 In our experimentation with machine learning models, we used a 99/1 train-test split since we had a large dataset (1,000,000 datapoints). The models we used had similar testing performance (~87%). Through our experimentation, we validated our original hypothesis that loan approvals/rejections followed some pattern, which we were able to accurately and consistently demonstrate with the machine learning models in our notebooks.
 
-To reproduce our results, please open the binder below and run the cells in the notebooks for Parts 1-3 (in order).
+To reproduce our results locally, please follow the steps below:
+1. In the terminal, run make. This will configure the conda environment. Note that this will take some time to complete running. 
+2. Run each of the Jupyter Notebooks in sequential order
+3. Check the plots folder, and ensure that the plots match up with what is displayed across the Jupyter Notebooks.
 
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://hub.2i2c.mybinder.org/user/ucb-stat-159-f25-final-group11-er9bc57r/doc/tree/Part1.ipynb)
 
 
-Here is a link to our GitHub pages: https://stat159.datahub.berkeley.edu/user/kchilaka/myst-build/projects/final-group11/
+Here is a link to our [GitHub pages](https://stat159.datahub.berkeley.edu/user/kchilaka/myst-build/projects/final-group11/).
