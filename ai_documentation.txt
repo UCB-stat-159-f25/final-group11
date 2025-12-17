@@ -1,3 +1,4 @@
 Henry: No generative AI prompts were used in the completion of this project
 Lavin: used llm to divide work into balanced sections for teamwork, used llm for occasional plotly font help
 Aiden: I did not use any generative AI to complete my part of the project.
+Kireeti: I did not use any generative AI in the process of completing my part of the project.
