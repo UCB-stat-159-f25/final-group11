@@ -20,4 +20,4 @@ To reproduce our results, please open the binder below and run the cells in the 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://hub.2i2c.mybinder.org/user/ucb-stat-159-f25-final-group11-er9bc57r/doc/tree/Part1.ipynb)
 
 
-Here is a link to our GitHub pages: https://stat159.datahub.berkeley.edu/user/kchilaka/myst-build/projects/final-group11/
+Here is a link to our [GitHub pages](https://stat159.datahub.berkeley.edu/user/kchilaka/myst-build/projects/final-group11/)
