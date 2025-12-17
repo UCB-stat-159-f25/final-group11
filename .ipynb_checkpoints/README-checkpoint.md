@@ -20,7 +20,8 @@ To reproduce our results locally, please follow the steps below:
 3. Check the plots folder, and ensure that the plots match up with what is displayed across the Jupyter Notebooks.
 
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://hub.2i2c.mybinder.org/user/ucb-stat-159-f25-final-group11-er9bc57r/doc/tree/Part1.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-f25/final-group11/330ce35a8e65f3246431f93312ea255bd653d5f7?urlpath=lab%2Ftree%2FPart1.ipynb
+)
 
 
 Here is a link to our [GitHub pages](https://ucb-stat-159-f25.github.io/final-group11/).
