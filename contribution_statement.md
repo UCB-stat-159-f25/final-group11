@@ -3,6 +3,6 @@ Henry: Modeling/Model Selection for Logistic Regression
 
 Lavin: Data Cleaning/EDA
 
-Aiden: Modeling with a neural network
+Aiden: Testing alternative models to Logistic Regression (KNN)
 
 Kireeti: Conclusion, Project Description in README, Myst, GitHub Pages, makefile, binder, .gitignore
