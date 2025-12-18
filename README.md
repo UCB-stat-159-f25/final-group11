@@ -26,7 +26,7 @@ This is the link to our [dataset](https://www.kaggle.com/datasets/parthpatel2130
 - `references.bib`: Contains relevant information to references used in our analysis
 - `pdf_builds/`: PDF versions of all notebooks
 - `ai_documentation.txt`: Documents how AI tools were used in the making of the project.
-- `plots/`: All relevant figures about the analysis
+- `plots/`: All relevant figures about the analysis. Note, the `plots/` folder will appear after the `eda_data_cleaning.ipynb` notebook is run via `make all`.
 - `contribution_statement.md`: Contributions of each individual
 - `project_description.md`: Description of the overall project
 - `pyproject.toml`: File relevant for the installation of the loan_tools package
