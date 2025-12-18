@@ -6,7 +6,7 @@ Bank lenders face high volumes of loan approval requests every day and need a st
 
 ## Insights from Exploratory Data Analysis
 
-Through our exploratory data analysis, we noticed some correlations between age, credit score, and debt with the likelihood of getting a loan approved. 
+This is the link to our [dataset](https://www.kaggle.com/datasets/parthpatel2130/realistic-loan-approval-dataset-us-and-canada). Through our exploratory data analysis, we noticed some correlations between age, credit score, and debt with the likelihood of getting a loan approved. 
 
 ## Analysis + Conclusion
 
@@ -20,8 +20,7 @@ To reproduce our results locally, please follow the steps below:
 3. Check the plots folder, and ensure that the plots match up with what is displayed across the Jupyter Notebooks.
 
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-f25/final-group11/330ce35a8e65f3246431f93312ea255bd653d5f7?urlpath=lab%2Ftree%2FPart1.ipynb
-)
-
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-f25/final-group11/02abdc116b11a1bb43f6e606720781bf8a40ce65?urlpath=lab%2Ftree%2FPart1.ipynb)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17970326.svg)](https://doi.org/10.5281/zenodo.17970326)
 
 Here is a link to our [GitHub pages](https://ucb-stat-159-f25.github.io/final-group11/).
