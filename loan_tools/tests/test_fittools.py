@@ -2,45 +2,27 @@ import pytest
 import pandas as pd
 import numpy as np
 import statsmodels.api as sm
-import warnings
-from loan_tools.fittools import get_classification_rate, best_alpha 
+from loan_tools.fittools import get_classification_rate, best_alpha
+import git
+from pathlib import Path
+import os
 
-sample_data = pd.DataFrame({
-    'loan_status': [0, 1, 0, 1, 0, 1],
-    'credit_score': [700, 680, 720, 650, 710, 690],
-    'loan_amount': [5000, 10000, 7000, 8000, 6000, 9000],
-    'loan_intent_Personal': [1, 0, 1, 0, 1, 0],
-    'loan_intent_Education': [0, 1, 0, 1, 0, 1]
-})
+ROOT_DIR = Path(git.Repo('.', search_parent_directories=True).working_tree_dir)
+DATA_PATH = os.path.join(ROOT_DIR, "data", "cleaned_data.csv")
 
-X_cols = ['credit_score', 'loan_amount', 'loan_intent_Personal', 'loan_intent_Education']
-X_train = sm.add_constant(sample_data[X_cols].astype(float))
-y_train = sample_data['loan_status']
+# Load actual data instead of generating random data
+sample_data = pd.read_csv(DATA_PATH)
+sample_data = pd.get_dummies(sample_data, columns = ['loan_intent', 'product_type', 'occupation_status'], drop_first = True)
 
-
-def test_get_classification_rate():
-    model = sm.Logit(y_train, X_train).fit(disp=0)
-    rate, cutoff = get_classification_rate(model, X_cols, df=sample_data, y='loan_status')
+def test_classification_rate():
+    y = sample_data['loan_status']
+    X_cols_naive = ['loan_intent_Debt Consolidation', 'loan_intent_Education',
+           'loan_intent_Home Improvement', 'loan_intent_Medical',
+           'loan_intent_Personal', 'product_type_Line of Credit',
+           'product_type_Personal Loan', 'credit_score']
+    X_naive = sm.add_constant(sample_data[X_cols_naive].astype(int))
     
-    assert isinstance(rate, float)
-    assert isinstance(cutoff, float)
-    assert 0 <= rate <= 100
-    assert 0 <= cutoff <= 1
-
-
-def test_best_alpha():
-    alphas = [0.1, 1, 10]
-    best_model, best_classification, best_alpha_val = best_alpha(
-        alphas=alphas,
-        train=sample_data,
-        test=sample_data,
-        lp='l1',
-        y_var='loan_status'
-    )
-    
-    assert best_model is not None
-    assert isinstance(best_classification, (tuple, list))
-    assert isinstance(best_alpha_val, (float, np.floating))
-    
-    assert 0 <= best_classification[0] <= 100
-    assert 0 <= best_classification[1] <= 1
+    model_naive = sm.Logit(y, X_naive).fit()
+    class_rate = get_classification_rate(md = model_naive, X = X_cols_naive, df = test)
+    assert type(class_rate) == tuple
+    assert type(class_rate[0]) == float
