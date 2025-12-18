@@ -42,6 +42,6 @@ To reproduce our results locally, please follow the steps below:
 5. Check the plots folder, and ensure that the plots match up with what is displayed across the Jupyter Notebooks. To delete the plots, run `make clean`.
 6. To test the `loan_tools` package, in the conda environment, run `python -m pytest`.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-f25/final-group11.git/HEAD?urlpath=%2Fdoc%2Ftree%2FPart1.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-f25/final-group11.git/HEAD?urlpath=%2Fdoc%2Ftree%2Feda_data_cleaning.ipynb)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17970326.svg)](https://doi.org/10.5281/zenodo.17970326)
 [![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)](https://ucb-stat-159-f25.github.io/final-group11/)
