@@ -7,4 +7,4 @@ Aiden: Testing alternative models to Logistic Regression (KNN)
 
 Kireeti: Conclusion, Project Description in README, Myst, GitHub Pages, makefile, binder, .gitignore
 
-Main.ipynb was written as a group.
+Finishing touches and main.ipynb were done as a group.
