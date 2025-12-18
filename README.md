@@ -22,6 +22,6 @@ To reproduce our results locally, please follow the steps below:
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-f25/final-group11/f25cb800c22b0c4c80b24d029d4adce7bbc31f61?urlpath=lab%2Ftree%2FPart1.ipynb
 )
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17970326.svg)](https://doi.org/10.5281/zenodo.17970326)
 
 Here is a link to our [GitHub pages](https://ucb-stat-159-f25.github.io/final-group11/).
