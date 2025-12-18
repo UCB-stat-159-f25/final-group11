@@ -19,8 +19,7 @@ To reproduce our results locally, please follow the steps below:
 2. Run each of the Jupyter Notebooks in sequential order
 3. Check the plots folder, and ensure that the plots match up with what is displayed across the Jupyter Notebooks.
 
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-f25/final-group11/02abdc116b11a1bb43f6e606720781bf8a40ce65?urlpath=lab%2Ftree%2FPart1.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-f25/final-group11/2e4c50084b25f50349f7b791e438a18a8c192a5d?urlpath=lab%2Ftree%2FPart1.ipynb)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17970326.svg)](https://doi.org/10.5281/zenodo.17970326)
 
 Here is a link to our [GitHub pages](https://ucb-stat-159-f25.github.io/final-group11/).
